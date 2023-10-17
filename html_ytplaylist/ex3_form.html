@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML form</title>
+</head>
+
+<body>
+    <form method="GET" action="hello.html">
+        <!--method GET is for showing passed things in url and method POST is for passing the things to the header.. action is to tell where to go -->
+        <h1>Sign Up Form</h1>
+        <br />
+        <label for="firstname">First Name: </label>
+        <!--for and id is to point the input space when we touch the label -->
+        <input type="text" id="firstname" placeholder="First Name" /> <br />
+        <br />
+        <label for="lastname">Last Name: </label>
+        <input type="text" id="lastname" placeholder="Last Name" /> <br />
+        <br />
+        <label for="password">Password: </label>
+        <input type="password" id="password" placeholder="Password" /><br />
+        <br />
+        <label for="gender">Select Gender</label><br />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" /><br />
+        <!--name is for passing input using method and action-->
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" /><br />
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" /> <br />
+        <br />
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="India">India</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Bhutan">Bhutan</option>
+        </select>
+        <!--To make gender column in form of options or dropdown menu-->
+        <br /><br />
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br />
+        <br /><br />
+        <label for="myself">Write about yourself below</label> <br />
+        <br />
+
+        <textarea name="myself" id="myself" cols="30" rows="10" placeholder="Type here"></textarea><br /><br />
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>

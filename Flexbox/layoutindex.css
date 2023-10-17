@@ -1,0 +1,25 @@
+.container{
+    border: 5px solid #ffcc5c;
+    display:flex;  
+    /* by default flexbox container has horizontal direction.. our main axis goes from left to right along the row..cross axis goes from top to bottom  */
+    flex-direction: row; /*column direction will reverse the direction of the main and cross axis*/
+    
+    justify-content:flex-end;  
+    
+    
+    /*justify content controls the content along the main axis*/
+    /*justify content can be of diff types: flex-start flex-end center space-around space between space evenly... by default its flex-start*/
+
+
+}
+
+/* .logout
+{
+    margin-left: auto; 
+    it will automatically shift the logout to the right hand side and if wo do it for search then boht search and logout move to the right hand side
+} */
+
+.home
+{
+    margin-right: auto;
+}

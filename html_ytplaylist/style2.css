@@ -1,0 +1,18 @@
+body{
+    font-family: 'Poppins', sans-serif;  
+}
+h1{
+    background-color: dimgray;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+div
+{
+    border-width: 4px solid black;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

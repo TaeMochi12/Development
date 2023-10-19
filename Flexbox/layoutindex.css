@@ -1,25 +1,130 @@
 .container{
     border: 5px solid #ffcc5c;
     display:flex;  
+    /* height: 100%; */
+    /* align-items:center ; */
+    /*it controls the content along the cross axis*/
+    /*stretch, flex-start, flex-end...*/
+    /* justify-content: center;   */
+    /*if used along with align center then the items will be placed in the center of the container*/
+    
+    
     /* by default flexbox container has horizontal direction.. our main axis goes from left to right along the row..cross axis goes from top to bottom  */
-    flex-direction: row; /*column direction will reverse the direction of the main and cross axis*/
+    /* flex-direction: row;  */
+    /* flex-direction: column; */
+    /*column direction will reverse the direction of the main and cross axis*/
+    /* justify-content: flex-end;   */
+    /* justify content will now control the contents in top to bottom direction */
+    /* align-items: flex-end; */
+    /* align items will now control contents in left to right direction */
     
-    justify-content:flex-end;  
-    
-    
+    /* justify-content:flex-end;   */
     /*justify content controls the content along the main axis*/
     /*justify content can be of diff types: flex-start flex-end center space-around space between space evenly... by default its flex-start*/
+
+    /* flex-wrap:wrap ; */
+    /*wrap will make the items take the full width which you want explicitly*/
+    /*it is by default nowrap i.e. it will not give width to the items and will scale down the items in the same row if there isn't enough required space, no element will go to the next line to take the explicit width*/
 
 
 }
 
+/* -----------------margin auto---------------- */
 /* .logout
 {
     margin-left: auto; 
     it will automatically shift the logout to the right hand side and if wo do it for search then boht search and logout move to the right hand side
 } */
 
-.home
+/* .home
 {
     margin-right: auto;
+} */
+
+/* --------------flex property------------------- */
+/* .container div{    */
+    /*to stretch and shrink the elements with the container(responsive)*/
+    /* flex:1; */
+
+    /*flex is  a short hand property for  3 other properties:flex-grow, flex-shrink, flex-basis*/
+/* } */
+
+/* .container .search
+{ */
+    /*to make the width of search twice the other elements*/
+    /*if we remove the above flex:1 styling on all the items then search will have twice the width and it will shrink and stretch accordingly while the other items will take the same space and won't change width*/
+    /* flex: 2; */
+/* } */
+
+/* .home , .logout
+{
+    flex:1; */
+    /*if we want to fix search width and change the width of home and logout only*/
+/* } */
+
+/* **Taking only Home and Logout item */
+
+/* flex: 1; */
+    /* it is same as flex: 1 1 0;
+    which means flex-grow:1; - it decides how much of the remaining extra space of the container to be distributed to the items, the items grow with the growing width
+
+                flex-shrink:1; - it shrinks the item according to the width if when we decrease the width
+
+                flex-basis:0; - sets  the base width of an element that it will occupy no matter how big the width of the container is and if there isn't enough space then it begins to shrink because by default flex-shrink is set to 1*/
+
+/* .home
+{ */
+    
+                
+                /* flex: 1 1 200px; */
+                /* flex-grow:1;
+                flex-basis: 200px;
+                flex-shrink:1; */
+                /* if shrink is 5 here then it will shrink 5 times  faster than logout*/
+/* } */
+
+.logout
+{
+    flex: 10 1 200px;
+    /* flex-grow:10; 
+    flex-basis: 200px;
+    flex-shrink:1; */
 }
+
+/* ----------------Align Items----------------- */
+/* .logout
+{ */
+    /*pushes the logout to the top of container along the cross axis*/
+    /* align-self: flex-start;  
+} */
+
+/* .home
+{ */
+    /*pushes the home to the end of container along the cross axis*/
+    /* align-self: flex-end;
+} */
+
+/* ---------------wrapping------------------------- */
+/* .container div
+{ */
+   /*when the container's width will be 900px then all the items will take the width of 300px otherwise they'll just take equal width*/
+    /* width: 300px;   
+} */
+
+/* -----------------order------------------- */
+
+.home
+{
+    order: 4;
+}
+
+.search
+{
+    order:0;
+    /*by default order is set to 0 and whichever item is set at a greater order than 0, it is placed at the end.. if we give value less than 0 sucha that -1 then it will be placed in beginning*/
+}
+
+.logout{
+    order: -2;
+}
+
